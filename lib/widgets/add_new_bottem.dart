@@ -2,6 +2,7 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:notes/widgets/custom_text_field.dart';
 
 class AddNote extends StatelessWidget {
   const AddNote({super.key});
@@ -9,33 +10,15 @@ class AddNote extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Padding(
-      padding: EdgeInsets.symmetric(horizontal: 20),
+      padding: EdgeInsets.symmetric(horizontal: 16),
       child: Column(
         children: [
-          SizedBox(
-            height: 20,
+          SizedBox(height: 32,),
+          CustomTextField(
+
           ),
-          TextField(
-            decoration: InputDecoration(
-              
-              hintText: 'Title',
-              border: OutlineInputBorder(),
-            ),
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          TextField(
-            decoration: InputDecoration(
-              contentPadding: EdgeInsets.symmetric(vertical: 90),
-              
-              hintText: 'Content',
-              border: OutlineInputBorder(),
-              
-            ),
-          )
         ],
-      ),
+      )
     );
   }
 }
