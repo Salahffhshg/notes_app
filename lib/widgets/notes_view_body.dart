@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'custom_app_bar.dart';
 
@@ -44,7 +45,7 @@ class NoteItem extends StatelessWidget {
               ),
             ),
             subtitle: const Text(
-              'buid your carear with salah mohamed',
+              'Buid your carear with salah mohamed',
               style: TextStyle(
                 color: Colors.black,
                 fontSize: 20,
@@ -53,8 +54,9 @@ class NoteItem extends StatelessWidget {
             trailing: IconButton(
               onPressed: () {},
               icon: const Icon(
-                Icons.delete,
+                FontAwesomeIcons.trash,
                 color: Colors.black,
+                size: 30,
               ),
             ),
           ),
