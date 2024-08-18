@@ -8,7 +8,7 @@ class CustomAppBar extends StatelessWidget {
   final IconData icon;
   @override
   Widget build(BuildContext context) {
-    return  Row(
+    return Row(
       children: [
         Text(
           title,
