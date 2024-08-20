@@ -14,7 +14,7 @@ class Notes extends StatelessWidget {
           showModalBottomSheet(
             context: context,
             builder: (context) {
-              return const AddNote();
+              return  AddNote();
             },
           );
         },
