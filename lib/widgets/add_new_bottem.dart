@@ -18,8 +18,7 @@ class _AddNoteState extends State<AddNote> {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16),
-      child: SingleChildScrollView(
-          child: BlocConsumer<NotesCubit, AddNotsState>(
+      child: BlocConsumer<NotesCubit, AddNotsState>(
         listener: (context, state) {
           if (state is AddNoteFailure) {
             print('failied ${state.errMessage}');
@@ -30,10 +29,13 @@ class _AddNoteState extends State<AddNote> {
         },
         builder: (context, state) {
           return ModalProgressHUD(
-              inAsyncCall: state is AddNoteLoading ? true : false,
-              child: const AddNotForm());
+            inAsyncCall: state is AddNoteLoading ? true : false,
+            child: const SingleChildScrollView(
+              child: AddNotForm(),
+            ),
+          );
         },
-      )),
+      ),
     );
   }
 }
